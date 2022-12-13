@@ -6,24 +6,6 @@ use Illuminate\Support\Facades\Storage;
 
 class Puzzle4 implements PuzzleInterface
 {
-    protected const SCORES_FOR_SHAPES = [
-        self::ME_ROCK => 1,
-        self::ME_PAPER => 2,
-        self::ME_SCISSORS => 3
-    ];
-
-    protected const OPP_ROCK = 'A';
-    protected const OPP_PAPER = 'B';
-    protected const OPP_SCISSORS = 'C';
-
-    protected const ME_ROCK = 'X';
-    protected const ME_PAPER = 'Y';
-    protected const ME_SCISSORS = 'Z';
-
-    protected const LOSE = 'X';
-    protected const DRAW = 'Y';
-    protected const WIN = 'Z';
-
     public function get_data(string $file): array
     {
         $input_text = Storage::disk('local')->get("input/{$file}");
